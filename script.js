@@ -19,3 +19,21 @@ var Color;
 // type: any
 var car = 'dkldls';
 car = 213;
+// functions and types
+function returnName() {
+    return 'David';
+}
+function sayHello() {
+    console.log('hello');
+}
+function multi(value1, value2) {
+    return value1 * value2;
+}
+// functions as types
+var myFunction;
+myFunction = multi;
+// Objects as types
+var object = {
+    name: 'holla',
+    age: 12
+};

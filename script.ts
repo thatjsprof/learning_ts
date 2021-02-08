@@ -34,3 +34,9 @@ function multi(value1: number, value2: number): number {
 // functions as types
 let myFunction: (val1: number, val2: number) => number 
 myFunction = multi
+
+// Objects as types
+let object: {name: string, age: number} = {
+    name: 'holla',
+    age: 12
+}
