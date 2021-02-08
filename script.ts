@@ -17,3 +17,13 @@ enum Color {
 // type: any
 let car: any = 'dkldls'
 car = 213
+
+// functions and types
+function returnName(): string {
+    return 'David'
+}
+
+function sayHello(): void {
+    console.log('hello')
+}
+
