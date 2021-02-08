@@ -40,3 +40,10 @@ let object: {name: string, age: number} = {
     name: 'holla',
     age: 12
 }
+
+let complexObject: { data: number[], output: (all: boolean) => number[]} = {
+    data: [12, 12, 3],
+    output: function(all: boolean): number[] {
+        return this.data
+    }
+}
