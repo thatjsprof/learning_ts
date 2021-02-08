@@ -54,7 +54,7 @@ let complexObject: Complex = {
 // union types
 let age: number | string | boolean= 21
 age = true
-'kk'
+'kkdcd'
 
 // check types
 let variable1: number = 21
