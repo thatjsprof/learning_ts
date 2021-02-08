@@ -54,3 +54,9 @@ let complexObject: Complex = {
 // union types
 let age: number | string | boolean= 21
 age = true
+
+// check types
+let variable1: number = 21
+if (typeof variable1 == "number") {
+    console.log('variable is a number')
+}
