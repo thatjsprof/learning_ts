@@ -41,9 +41,16 @@ let object: {name: string, age: number} = {
     age: 12
 }
 
-let complexObject: { data: number[], output: (all: boolean) => number[]} = {
+// type alias
+type Complex = {data: number[], output: (all: boolean) => number[]}
+
+let complexObject: Complex = {
     data: [12, 12, 3],
     output: function(all: boolean): number[] {
         return this.data
     }
 }
+
+// union types
+let age: number | string | boolean= 21
+age = true
