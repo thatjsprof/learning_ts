@@ -1,14 +1,13 @@
 "use strict";
-function Greeting(greeting) {
-    this.greeting = greeting;
-}
-Greeting.prototype.greet = function () {
-    return 'Hello' + this.greeting;
-};
-var greeter = new Greeting('holla');
-var button = document.createElement('button');
-button.textContent = 'Click me';
-button.addEventListener('click', function () {
-    console.log(greeter.greet());
-});
-document.body.appendChild(button);
+var string = 'holla';
+var number = 21;
+var variable = '1';
+var array = ['holla', 'thanks'];
+var tuple = [34, 'holla'];
+var Color;
+(function (Color) {
+    Color[Color["Gray"] = 0] = "Gray";
+    Color[Color["Green"] = 1] = "Green";
+    Color[Color["Blue"] = 2] = "Blue";
+})(Color || (Color = {}));
+var myColor = Color.Green;
