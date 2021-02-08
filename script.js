@@ -37,3 +37,9 @@ var object = {
     name: 'holla',
     age: 12
 };
+var complexObject = {
+    data: [12, 12, 3],
+    output: function (all) {
+        return this.data;
+    }
+};
