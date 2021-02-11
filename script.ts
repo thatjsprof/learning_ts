@@ -61,3 +61,28 @@ let variable1: number = 21
 if (typeof variable1 == "number") {
     console.log('variable is a number')
 }
+
+// nullable type
+let value: number | null = 1
+
+function never(): never {
+    throw new Error('not available')
+}
+
+type bankAccountType = { money: number, deposit: (value: number) => void }
+
+let bankAccount: bankAccountType = {
+    money: 2000,
+    deposit(value: number): void {
+        this.money = value
+    }
+}
+
+let myself: { name: string, bankAccount: bankAccountType, hobbies: string[] } = {
+    name: 'max',
+    bankAccount: bankAccount,
+    hobbies: ["sports", "cooking"]
+}
+
+myself.bankAccount.deposit(3000)
+console.log(myself)

@@ -43,3 +43,30 @@ var complexObject = {
         return this.data;
     }
 };
+// union types
+var age = 21;
+age = true;
+'kkdcd';
+// check types
+var variable1 = 21;
+if (typeof variable1 == "number") {
+    console.log('variable is a number');
+}
+// nullable type
+var value = 1;
+function never() {
+    throw new Error('not available');
+}
+var bankAccount = {
+    money: 2000,
+    deposit: function (value) {
+        this.money = value;
+    }
+};
+var myself = {
+    name: 'max',
+    bankAccount: bankAccount,
+    hobbies: ["sports", "cooking"]
+};
+myself.bankAccount.deposit(3000);
+console.log(myself);
