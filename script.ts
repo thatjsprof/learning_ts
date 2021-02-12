@@ -123,3 +123,33 @@ class Person {
 const person = new Person('David')
 person.printName()
 
+class David extends Person {
+    constructor(name: string) {
+        super(name = 'David')
+        this.password = 'holla'
+    }
+
+    printPassword() {
+        console.log(this.password)
+    }
+}
+
+class Plants {
+    private _species: string = "Default"
+
+    set species(value: string) {
+        if (value.length > 3) {
+            this._species = value
+        }
+    } 
+
+    get species() {
+        return this._species
+    }
+}
+
+class Helpers {
+    static PI: number
+}
+
+Helpers.PI
