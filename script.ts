@@ -96,12 +96,30 @@ let double: (value: number) => number = function (value) {
     return value * 2
 } 
 
-let greet: (name: string | undefined) => void = function (name) {
-    if (name === undefined) { name = 'Max' }
+let greet = function (name = 'max'): void {
     console.log('My name is' + name)
 }
 
-
-
 var numbers: number[] = [-3, 33, 38, 5]
 console.log(Math.min.apply(Math, numbers))
+
+class Person {
+    private type: string
+    protected password: string
+
+    constructor(public name: string) {
+        this.name = name
+    }
+
+    printName() {
+        console.log(this.name)
+    }
+
+    private setType(type: string) {
+        this.type = type
+    }
+}
+
+const person = new Person('David')
+person.printName()
+
