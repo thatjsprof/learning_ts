@@ -84,5 +84,24 @@ let myself: { name: string, bankAccount: bankAccountType, hobbies: string[] } = 
     hobbies: ["sports", "cooking"]
 }
 
-myself.bankAccount.deposit(3000)
-console.log(myself)
+const countDown = (start: number = 20) => {
+    if (start > 10) {
+        setTimeout(() => {
+            console.log('starting')
+        }, start)
+    }
+}
+
+let double: (value: number) => number = function (value) {
+    return value * 2
+} 
+
+let greet: (name: string | undefined) => void = function (name) {
+    if (name === undefined) { name = 'Max' }
+    console.log('My name is' + name)
+}
+
+
+
+var numbers: number[] = [-3, 33, 38, 5]
+console.log(Math.min.apply(Math, numbers))

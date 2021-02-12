@@ -68,5 +68,22 @@ var myself = {
     bankAccount: bankAccount,
     hobbies: ["sports", "cooking"]
 };
-myself.bankAccount.deposit(3000);
-console.log(myself);
+var countDown = function (start) {
+    if (start === void 0) { start = 20; }
+    if (start > 10) {
+        setTimeout(function () {
+            console.log('starting');
+        }, start);
+    }
+};
+var double = function (value) {
+    return value * 2;
+};
+var greet = function (name) {
+    if (name === undefined) {
+        name = 'Max';
+    }
+    console.log('My name is' + name);
+};
+var numbers = [-3, 33, 38, 5];
+console.log(Math.min.apply(Math, numbers));
