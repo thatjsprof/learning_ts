@@ -149,7 +149,81 @@ class Plants {
 }
 
 class Helpers {
-    static PI: number
+    static PI: number = 3.14
 }
 
 Helpers.PI
+
+abstract class Project {
+    // you have to always inherit from abstract classes
+    abstract changeName(value: string): void // has to be implemented in inherited classes
+}
+
+class OnlyOne {
+    public readonly name
+    private static instance: OnlyOne
+    private constructor(name: string) {
+        this.name = name
+    }
+
+    static getInstance() {
+        if (!OnlyOne.instance) {
+            OnlyOne.instance = new OnlyOne('The only instance')
+        }
+        return OnlyOne.instance
+    }
+}
+
+// class Car {
+//     public name: string
+//     public acceleration: number = 0
+
+//     constructor(name: string) {
+//         this.name = name
+//     }
+
+//     public honk(): void {
+//         console.log('Tooot')
+//     }
+
+//     public accelerate(speed: number): void {
+//         this.acceleration = this.acceleration + speed
+//     }
+// }
+
+// let car1 = new Car('BMW')
+// car.honk()
+// console.log(car.acceleration)
+// car.accelerate()
+// console.log(car.acceleration)
+
+abstract class baseObject {
+    width: number = 0
+    length: number = 0
+}
+
+class Rectangle extends baseObject {
+    calcSize(): number {
+        return this.width * this.length
+    }
+}
+
+let rectangle = new Rectangle()
+console.log(rectangle.calcSize())
+
+class Person1 {
+    private _firstname: string = ""
+
+    set firstname(value: string) {
+        if (value.length > 3) {
+            this._firstname = value
+        }
+    }
+
+    get firstname(): string {
+        return this._firstname
+    }
+
+    enumerable: boolean = true
+    configurable: boolean = true
+}
